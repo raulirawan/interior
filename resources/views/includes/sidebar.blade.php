@@ -48,6 +48,17 @@
         </div>
         <div class="sidebar-menu">
             <ul class="menu">
+                <li class="sidebar-title">
+                    <div class="d-flex align-items-center">
+                        <div class="avatar avatar-xl">
+                            <img src="{{ asset('assets/images/faces/1.jpg') }}" alt="Face 1">
+                        </div>
+                        <div class="ms-3 name">
+                            <h5 class="font-bold">{{ Auth::user()->name }}</h5>
+                            <h6 class="text-muted mb-0">{{ Auth::user()->email }}</h6>
+                        </div>
+                    </div>
+                </li>
                 <li class="sidebar-title">Menu</li>
 
                 <li class="sidebar-item {{ request()->is('admin/dashboard*') ? 'active' : '' }}">
@@ -59,49 +70,49 @@
 
                 <li class="sidebar-item {{ request()->is('admin/users*') ? 'active' : '' }}">
                     <a href="{{ route('admin.users.index') }}" class='sidebar-link'>
-                        <i class="bi bi-grid-fill"></i>
+                        <i class="bi bi-people-fill"></i>
                         <span>Users</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item {{ request()->is('admin/categories*') ? 'active' : '' }}">
                     <a href="{{ route('admin.categories.index') }}" class='sidebar-link'>
-                        <i class="bi bi-grid-fill"></i>
+                        <i class="bi bi-tags-fill"></i>
                         <span>Project Category</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item {{ request()->is('admin/projects*') ? 'active' : '' }}">
                     <a href="{{ route('admin.projects.index') }}" class='sidebar-link'>
-                        <i class="bi bi-grid-fill"></i>
+                        <i class="bi bi-file-fill"></i>
                         <span>Project</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item {{ request()->is('admin/services*') ? 'active' : '' }}">
                     <a href="{{ route('admin.services.index') }}" class='sidebar-link'>
-                        <i class="bi bi-grid-fill"></i>
+                        <i class="bi bi-tools"></i>
                         <span>Services</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item {{ request()->is('admin/blogs*') ? 'active' : '' }}">
                     <a href="{{ route('admin.blogs.index') }}" class='sidebar-link'>
-                        <i class="bi bi-grid-fill"></i>
+                        <i class="bi bi-book"></i>
                         <span>Blogs</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item {{ request()->is('admin/testimonials*') ? 'active' : '' }}">
                     <a href="{{ route('admin.testimonials.index') }}" class='sidebar-link'>
-                        <i class="bi bi-grid-fill"></i>
+                        <i class="bi bi-chat-fill"></i>
                         <span>Testimonial</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item {{ request()->is('admin/settings*') ? 'active' : '' }}">
                     <a href="{{ route('admin.settings.index') }}" class='sidebar-link'>
-                        <i class="bi bi-grid-fill"></i>
+                        <i class="bi bi-gear-fill"></i>
                         <span>Settings</span>
                     </a>
                 </li>
