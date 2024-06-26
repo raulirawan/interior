@@ -21,9 +21,34 @@
     <link rel="stylesheet" href="{{ asset('/frontend') }}/assets/css/slick.css">
     <link rel="stylesheet" href="{{ asset('/frontend') }}/assets/css/nice-select.css">
     <link rel="stylesheet" href="{{ asset('/frontend') }}/assets/css/style.css">
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            left: 20px;
+            /* Adjust the distance from the left edge */
+            bottom: 20px;
+            /* Adjust the distance from the bottom edge */
+            z-index: 1000;
+            /* Ensure it's above other content */
+        }
+
+        .whatsapp-button img {
+            width: 60px;
+            /* Adjust the size of the WhatsApp icon */
+            border-radius: 50%;
+            /* Makes the icon circular */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            /* Optional: Adds shadow */
+        }
+    </style>
 </head>
 
 <body>
+    <div class="whatsapp-button">
+        <a href="{{ $setting->link_whatsapp }}" target="_blank">
+            <img src="{{ asset('frontend/assets/img/icon/whatsapp.png') }}" alt="WhatsApp">
+        </a>
+    </div>
     <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -50,14 +75,14 @@
                                         <li>Mon - Sat 8:00 - 17:30, Sunday - CLOSED</li>
                                     </ul>
                                 </div>
-                                <div class="header-info-right">
+                                {{-- <div class="header-info-right">
                                     <ul class="header-social">
                                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                         <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                         <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                     </ul>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -94,7 +119,7 @@
                             </div>
                             <div class="col-xl-2 col-lg-2 col-md-3">
                                 <div class="header-right-btn f-right d-none d-lg-block">
-                                    <a href="#" class="btn">Contact Now</a>
+                                    <a href="{{ $setting->link_whatsapp }}" target="_blank" class="btn">Contact Now</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
