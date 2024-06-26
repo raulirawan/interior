@@ -14,13 +14,12 @@
                             <div class="col-lg-11">
                                 <div class="hero__caption">
                                     <div class="hero-text1">
-                                        <span data-animation="fadeInUp" data-delay=".3s">hand car wash and detailing
-                                            service</span>
+                                        <span data-animation="fadeInUp" data-delay=".3s">Interior Constractor</span>
                                     </div>
-                                    <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1>
+                                    <h1 data-animation="fadeInUp" data-delay=".5s">PT WAHANA</h1>
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
-                                        <h2>Construction</h2>
-                                        <h2>Construction</h2>
+                                        <h2>CIPTA SELARAS ABUDAYA</h2>
+                                        <h2>CIPTA SELARAS ABUDAYA</h2>
                                     </div>
                                     <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
                                         <span><a href="services.html">Our Services</a></span>
@@ -37,8 +36,7 @@
                             <div class="col-lg-11">
                                 <div class="hero__caption">
                                     <div class="hero-text1">
-                                        <span data-animation="fadeInUp" data-delay=".3s">hand car wash and detailing
-                                            service</span>
+                                        <span data-animation="fadeInUp" data-delay=".3s">Interior Constractor</span>
                                     </div>
                                     <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1>
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
@@ -218,9 +216,11 @@
                                                         <img src="{{ $project->image }}" alt="{{ $project->name }}">
                                                     </div>
                                                     <div class="project-cap">
-                                                        <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}" class="plus-btn"><i
-                                                                class="ti-plus"></i></a>
-                                                        <h4><a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}">{{ $project->name }}</a></h4>
+                                                        <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}"
+                                                            class="plus-btn"><i class="ti-plus"></i></a>
+                                                        <h4><a
+                                                                href="{{ route('projectsDetail', [$project->id, $project->slug]) }}">{{ $project->name }}</a>
+                                                        </h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -277,10 +277,10 @@
                                     </div>
                                     <span class="back-text">Lat`s chat</span>
                                 </div>
-                                <p>Mollit anim laborum.Dvcuis aute iruxvfg dhjkolohr in re voluptate velit esscillumlore
-                                    eu quife nrulla parihatur. Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg
-                                    dhjinulpadeserunt mollitemnth incididbnt ut;o5tu layjobore mofllit anim.</p>
-                                <a href="#" class="white-btn">read more</a>
+                                <p>PT. Wahana Cipta Selaras Abyudaya is an Interior Contractor and Design company based in
+                                    Jakarta, Indonesia. The company was established in 2000, and has been serving thousands
+                                    of clients since its establishment.</p>
+                                <a href="{{ $setting->link_whatsapp }}" target="blank" class="white-btn">Contact Now</a>
                             </div>
                         </div>
                     </div>
@@ -472,8 +472,11 @@
                                         <ul class="david-info">
                                             <li>{{ Carbon\Carbon::parse($blog->created_at)->format('d F Y H:i') }}</li>
                                         </ul>
-                                        <h2><a href="{{ route('blogsDetail', [$blog->id, $blog->slug]) }}">{{ $blog->name }}</a></h2>
-                                        <a href="{{ route('blogsDetail', [$blog->id, $blog->slug]) }}" class="d-btn">Read more »</a>
+                                        <h2><a
+                                                href="{{ route('blogsDetail', [$blog->id, $blog->slug]) }}">{{ $blog->name }}</a>
+                                        </h2>
+                                        <a href="{{ route('blogsDetail', [$blog->id, $blog->slug]) }}"
+                                            class="d-btn">Read more »</a>
                                     </div>
                                 </div>
                             </div>

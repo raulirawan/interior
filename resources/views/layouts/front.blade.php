@@ -119,7 +119,8 @@
                             </div>
                             <div class="col-xl-2 col-lg-2 col-md-3">
                                 <div class="header-right-btn f-right d-none d-lg-block">
-                                    <a href="{{ $setting->link_whatsapp }}" target="_blank" class="btn">Contact Now</a>
+                                    <a href="{{ $setting->link_whatsapp }}" target="_blank" class="btn">Contact
+                                        Now</a>
                                 </div>
                             </div>
                             <!-- Mobile Menu -->
@@ -150,7 +151,10 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p class="info1">{{ $setting->about_us }}</p>
+                                        <p class="info1">PT. Wahana Cipta Selaras Abyudaya is an Interior Contractor
+                                            and Design company based in Jakarta, Indonesia. The company was established
+                                            in 2000, and has been serving thousands of clients since its establishment.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
