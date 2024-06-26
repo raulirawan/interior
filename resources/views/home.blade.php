@@ -22,7 +22,7 @@
                                         <h2>CIPTA SELARAS ABUDAYA</h2>
                                     </div>
                                     <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
-                                        <span><a href="services.html">Our Services</a></span>
+                                        <span><a href="{{ route('services') }}">Our Services</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -40,11 +40,11 @@
                                     </div>
                                     <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1>
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
-                                        <h2>Construction</h2>
-                                        <h2>Construction</h2>
+                                        <h2>CIPTA SELARAS ABUDAYA</h2>
+                                        <h2>CIPTA SELARAS ABUDAYA</h2>
                                     </div>
                                     <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
-                                        <span><a href="services.html">Our Services</a></span>
+                                        <span><a href="{{ route('services') }}">Our Services</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -241,9 +241,10 @@
                                                             <img src="{{ $project->image }}" alt="{{ $project->name }}">
                                                         </div>
                                                         <div class="project-cap">
-                                                            <a href="project_details.html" class="plus-btn"><i
-                                                                    class="ti-plus"></i></a>
-                                                            <h4><a href="project_details.html">{{ $project->name }}</a>
+                                                            <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}"
+                                                                class="plus-btn"><i class="ti-plus"></i></a>
+                                                            <h4><a
+                                                                    href="{{ route('projectsDetail', [$project->id, $project->slug]) }}">{{ $project->name }}</a>
                                                             </h4>
                                                         </div>
                                                     </div>
