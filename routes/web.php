@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
@@ -29,6 +30,18 @@ Route::get('/projects', [HomeController::class, 'projects'])->name('projects');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
 Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contact-us');
+
+
+// service detail
+Route::get('/services/{service}/{slug?}', [HomeController::class, 'servicesDetail'])->name('servicesDetail');
+
+// project detail
+Route::get('/projects/{project}/{slug?}', [HomeController::class, 'projectsDetail'])->name('projectsDetail');
+
+// blog detail
+Route::get('/blogs/{blog}/{slug?}', [HomeController::class, 'blogsDetail'])->name('blogsDetail');
+
+Route::post('/store/messages', [MessageController::class, 'store'])->name('messages.store');
 
 
 Auth::routes([
@@ -92,4 +105,8 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('settings', [SettingController::class, 'index'])->name('admin.settings.index');
     Route::get('settings/edit', [SettingController::class, 'edit'])->name('admin.settings.edit');
     Route::post('settings/update', [SettingController::class, 'update'])->name('admin.settings.update');
+
+    // testimonial
+    Route::get('messages', [MessageController::class, 'index'])->name('admin.messages.index');
+    Route::get('messages/delete/{message}', [MessageController::class, 'delete'])->name('admin.messages.delete');
 });

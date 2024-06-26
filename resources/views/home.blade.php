@@ -76,16 +76,18 @@
                             <div class="col-xl-4 col-lg-4 col-md-6">
                                 <div class="single-service-cap mb-30">
                                     <div class="service-img">
-                                        <img src="{{ $service->image }}" alt="">
+                                        <img src="{{ $service->image }}" alt="{{ $service->name }}">
                                     </div>
                                     <div class="service-cap">
-                                        <h4><a href="services_details.html">{{ $service->name }}</a></h4>
-                                        <a href="services_details.html" class="more-btn">Read More <i
-                                                class="ti-plus"></i></a>
+                                        <h4><a
+                                                href="{{ route('servicesDetail', [$service->id, $service->slug]) }}">{{ $service->name }}</a>
+                                        </h4>
+                                        <a href="{{ route('servicesDetail', [$service->id, $service->slug]) }}"
+                                            class="more-btn">Read More <i class="ti-plus"></i></a>
                                     </div>
                                     <div class="service-icon">
                                         <img src="{{ asset('/frontend') }}/assets/img/icon/services_icon1.png"
-                                            alt="">
+                                            alt="{{ $service->name }}">
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +146,7 @@
                 <div class="right-content">
                     <!-- img -->
                     <div class="right-img">
-                        <img src="{{ asset('/frontend') }}/assets/img/gallery/safe_in.png" alt="">
+                        <img src="{{ asset('/frontend') }}/assets/img/gallery/safe_in.png" alt="Image About">
                     </div>
                     <div class="support-img-cap text-center">
                         <span>1994</span>
@@ -216,9 +218,9 @@
                                                         <img src="{{ $project->image }}" alt="{{ $project->name }}">
                                                     </div>
                                                     <div class="project-cap">
-                                                        <a href="project_details.html" class="plus-btn"><i
+                                                        <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}" class="plus-btn"><i
                                                                 class="ti-plus"></i></a>
-                                                        <h4><a href="project_details.html">{{ $project->name }}</a></h4>
+                                                        <h4><a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}">{{ $project->name }}</a></h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -355,7 +357,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
                             <div class="team-img">
-                                <img src="{{ asset('/frontend') }}/assets/img/team/team1.png" alt="">
+                                <img src="{{ asset('/frontend') }}/assets/img/team/team1.png" alt="Team 1">
                             </div>
                             <div class="team-caption">
                                 <span>UX Designer</span>
@@ -366,7 +368,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
                             <div class="team-img">
-                                <img src="{{ asset('/frontend') }}/assets/img/team/team2.png" alt="">
+                                <img src="{{ asset('/frontend') }}/assets/img/team/team2.png" alt="Team 2">
                             </div>
                             <div class="team-caption">
                                 <span>UX Designer</span>
@@ -377,7 +379,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
                         <div class="single-team mb-30">
                             <div class="team-img">
-                                <img src="{{ asset('/frontend') }}/assets/img/team/team3.png" alt="">
+                                <img src="{{ asset('/frontend') }}/assets/img/team/team3.png" alt="Team 3">
                             </div>
                             <div class="team-caption">
                                 <span>UX Designer</span>
@@ -460,7 +462,7 @@
                                 <!-- single-news -->
                                 <div class="single-news mb-30">
                                     <div class="news-img">
-                                        <img src="{{ $blog->image }}" alt="">
+                                        <img src="{{ $blog->image }}" alt="{{ $blog->name }}">
                                         <div class="news-date text-center">
                                             <span>{{ Carbon\Carbon::parse($blog->created_at)->format('d') }}</span>
                                             <p>{{ Carbon\Carbon::parse($blog->created_at)->format('F') }}</p>
@@ -470,8 +472,8 @@
                                         <ul class="david-info">
                                             <li>{{ Carbon\Carbon::parse($blog->created_at)->format('d F Y H:i') }}</li>
                                         </ul>
-                                        <h2><a href="single-blog.html">{{ $blog->name }}</a></h2>
-                                        <a href="single-blog.html" class="d-btn">Read more »</a>
+                                        <h2><a href="{{ route('blogsDetail', [$blog->id, $blog->slug]) }}">{{ $blog->name }}</a></h2>
+                                        <a href="{{ route('blogsDetail', [$blog->id, $blog->slug]) }}" class="d-btn">Read more »</a>
                                     </div>
                                 </div>
                             </div>

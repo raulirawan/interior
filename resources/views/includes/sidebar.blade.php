@@ -110,6 +110,13 @@
                     </a>
                 </li>
 
+                <li class="sidebar-item {{ request()->is('admin/messages*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.messages.index') }}" class='sidebar-link'>
+                        <i class="bi bi-chat-fill"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+
                 <li class="sidebar-item {{ request()->is('admin/settings*') ? 'active' : '' }}">
                     <a href="{{ route('admin.settings.index') }}" class='sidebar-link'>
                         <i class="bi bi-gear-fill"></i>

@@ -30,7 +30,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="{{ asset('/frontend') }}/assets/img/logo/loder-logo.png" alt="">
+                    <img src="{{ asset('/frontend') }}/assets/img/logo/loder-logo.png" alt="Loader Logo">
                 </div>
             </div>
         </div>
@@ -46,8 +46,7 @@
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left">
                                     <ul>
-                                        <li>+(123) 1234-567-8901</li>
-                                        <li>info@domain.com</li>
+                                        <li>{{ $setting->phone }}</li>
                                         <li>Mon - Sat 8:00 - 17:30, Sunday - CLOSED</li>
                                     </ul>
                                 </div>
@@ -71,11 +70,11 @@
                                 <div class="logo">
                                     <!-- logo-1 -->
                                     <a href="{{ route('home') }}" class="big-logo"><img
-                                            src="{{ asset('/frontend') }}/assets/img/logo/logo.png" alt=""></a>
+                                            src="{{ asset('/frontend') }}/assets/img/logo/logo.png" alt="Logo"></a>
                                     <!-- logo-2 -->
                                     <a href="{{ route('home') }}" class="small-logo"><img
                                             src="{{ asset('/frontend') }}/assets/img/logo/loder-logo.png"
-                                            alt=""></a>
+                                            alt="Loader Logo"></a>
                                 </div>
                             </div>
                             <div class="col-xl-8 col-lg-8 col-md-8">
@@ -122,12 +121,11 @@
                                 <div class="footer-logo">
                                     <a href="{{ route('home') }}"><img
                                             src="{{ asset('/frontend') }}/assets/img/logo/logo2_footer.png"
-                                            alt=""></a>
+                                            alt="Logo Footer"></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p class="info1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                                            do eiusmod tempor incididunt ut labore.</p>
+                                        <p class="info1">{{ $setting->about_us }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -150,45 +148,15 @@
                                 <div class="footer-tittle">
                                     <h4>Contact</h4>
                                     <div class="footer-pera">
-                                        <p class="info1">198 West 21th Street, Suite 721 New York,NY 10010</p>
+                                        <p class="info1">{{ $setting->address }}</p>
                                     </div>
                                     <ul>
-                                        <li><a href="#">Phone: +95 (0) 123 456 789</a></li>
-                                        <li><a href="#">Cell: +95 (0) 123 456 789</a></li>
+                                        <li><a href="#">Phone: {{ $setting->phone }}</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-8">
-                            <div class="single-footer-caption mb-50">
-                                <!-- Form -->
-                                <div class="footer-form">
-                                    <div id="mc_embed_signup">
-                                        <form target="_blank"
-                                            action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                            method="get" class="subscribe_form relative mail_part"
-                                            novalidate="true">
-                                            <input type="email" name="EMAIL" id="newsletter-form-email"
-                                                placeholder=" Email Address " class="placeholder hide-on-focus"
-                                                onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = ' Email Address '">
-                                            <div class="form-icon">
-                                                <button type="submit" name="submit" id="newsletter-submit"
-                                                    class="email_icon newsletter-submit button-contactForm">
-                                                    SIGN UP
-                                                </button>
-                                            </div>
-                                            <div class="mt-10 info"></div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <!-- Map -->
-                                <div class="map-footer">
-                                    <img src="{{ asset('/frontend') }}/assets/img/gallery/map-footer.png"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                     <!-- Copy-Right -->
                     <div class="row align-items-center">
@@ -198,9 +166,7 @@
                                     Copyright &copy;
                                     <script>
                                         document.write(new Date().getFullYear());
-                                    </script> All rights reserved | This template is made with <i
-                                        class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                        target="_blank">Colorlib</a>
+                                    </script> All rights reserved
                                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 </p>
                             </div>
@@ -252,7 +218,7 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="{{ asset('/frontend') }}/assets/js/plugins.js"></script>
     <script src="{{ asset('/frontend') }}/assets/js/main.js"></script>
-
+    @include('sweetalert::alert')
 </body>
 
 </html>

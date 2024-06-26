@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Controllers\UserController;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -23,5 +24,10 @@ class Blog extends Model
             return asset('image/blogs/' . $value);
         }
         return asset('dummy/750x375.png');
+    }
+
+    public function user()
+    {
+        return $this->hasOne(User::class, 'id', 'user_id');
     }
 }
