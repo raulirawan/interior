@@ -53,7 +53,7 @@
         @media #{$xs}{
             padding-top: 70px
         }
-        
+
         h1{
             font-size: 140px;
             font-weight: 900;
@@ -126,15 +126,15 @@
                     -webkit-text-stroke: 1px#fff;
                     -webkit-text-fill-color:transparent;
                 }
-    
+
                 &:nth-child(2){
-                    color: #ff5f13;
+                    color: #a78042;
                     -webkit-animation: animate 4s ease-in-out infinite;
                     animation: animate 4s ease-in-out infinite;
                 }
 
             }
-            
+
         }
         @keyframes animate
         {
@@ -164,7 +164,7 @@
                 position: absolute;
                 content: "";
                 width: 25px;
-                height: 2px; 
+                height: 2px;
                 top: 0;
                 left: -30px;
                 top: 50%;
@@ -228,7 +228,7 @@
                 font-size: 50px;
               }
         }
-        // 
+        //
         nav {
             margin: 7px 0;
             padding-left: 95px;
@@ -238,7 +238,7 @@
                 content: "";
                 width: 75px;
                 height: 1px;
-                background: #ff5f13;
+                background: #a78042;
                 left: 0;
                 top: 52%;
                 transform: translateY(-50%);
@@ -250,13 +250,13 @@
             margin: 0;
 
             a {
-                color: #ff5f13;
+                color: #a78042;
                 font-size: 17px;
                 text-transform: uppercase;
             }
         }
         .breadcrumb-item + .breadcrumb-item::before {
-            color: #ff5f13;
+            color: #a78042;
         }
         &.hero-cap2{
             @media #{$xs}{

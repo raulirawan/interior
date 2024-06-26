@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/frontend') }}/assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/img/logo-wcsa.png') }}">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="{{ asset('/frontend') }}/assets/css/bootstrap.min.css">
@@ -55,7 +55,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="{{ asset('/frontend') }}/assets/img/logo/loder-logo.png" alt="Loader Logo">
+                    <img src="{{ asset('frontend/assets/img/logo-wcsa.png') }}" style="width: 60px" alt="Loader Logo">
                 </div>
             </div>
         </div>
@@ -95,10 +95,10 @@
                                 <div class="logo">
                                     <!-- logo-1 -->
                                     <a href="{{ route('home') }}" class="big-logo"><img
-                                            src="{{ asset('/frontend') }}/assets/img/logo/logo.png" alt="Logo"></a>
+                                            src="{{ asset('frontend/assets/img/logo-wcsa.png') }}" style="width: 60px" alt="Logo"></a>
                                     <!-- logo-2 -->
                                     <a href="{{ route('home') }}" class="small-logo"><img
-                                            src="{{ asset('/frontend') }}/assets/img/logo/loder-logo.png"
+                                            src="{{ asset('frontend/assets/img/logo-wcsa.png') }}" style="width: 60px"
                                             alt="Loader Logo"></a>
                                 </div>
                             </div>
@@ -146,7 +146,7 @@
                                 <!-- logo -->
                                 <div class="footer-logo">
                                     <a href="{{ route('home') }}"><img
-                                            src="{{ asset('/frontend') }}/assets/img/logo/logo2_footer.png"
+                                            src="{{ asset('frontend/assets/img/logo-wcsa.png') }}" style="width: 60px; "
                                             alt="Logo Footer"></a>
                                 </div>
                                 <div class="footer-tittle">

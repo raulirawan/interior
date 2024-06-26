@@ -1,5 +1,5 @@
 .project-area,.about-area,.contact-section{
-    
+
     .project-caption{
         .single-project{
             position: relative;
@@ -13,11 +13,11 @@
                 background:#fafafa;
                 @include transition(.4s);
                 position: relative;
-                h4{   
+                h4{
                     margin: 0;
-                    line-height: 1.2; 
+                    line-height: 1.2;
                     font-size: 25px;
-                    font-weight: 700;    
+                    font-weight: 700;
 
                     a{
                         color: #0e132a;
@@ -29,7 +29,7 @@
             }
             &:hover{
                 .project-cap{
-                  
+
                 }
             }
             // plus Btn
@@ -62,7 +62,7 @@
             &:hover {
                 .project-cap{
                     background: #00235b;
-                    h4{                   
+                    h4{
                         a{
                             color: #fff;
                         }
@@ -73,15 +73,15 @@
                     visibility: visible;
                     i {
                         color: #fff;
-                        background: #ff5f13;
+                        background: #a78042;
                     }
                 }
             }
 
         }
-        
+
     }
-        
+
 
     // Tabs Button Style
     .properties__button{
@@ -91,7 +91,7 @@
         }
          @media #{$sm}{
             float: left;
-        } 
+        }
         @media #{$xs}{
             float: left;
         }
@@ -108,7 +108,7 @@
             }
              @media #{$sm}{
                 padding: 10px 15px;
-            } 
+            }
             @media #{$xs}{
                 padding: 10px 15px;
             }
@@ -134,10 +134,10 @@
             justify-content: center;
             @media #{$md}{
                 justify-content: start;
-            } 
+            }
             @media #{$sm}{
                 justify-content: start;
-            } 
+            }
             @media #{$xs}{
                 justify-content: start;
             }
