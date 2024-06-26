@@ -138,7 +138,7 @@
                     </div>
                     <div class="support-caption">
                         <p>
-                            {{ $setting->about_us }}
+                            {!! $setting->about_us !!}
                         </p>
                         <a href="{{ route('about-us') }}" class="btn red-btn2">read more</a>
                     </div>

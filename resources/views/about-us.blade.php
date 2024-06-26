@@ -38,7 +38,7 @@
                     </div>
                     <div class="support-caption">
                         <p>
-                            {{ $setting->about_us }}
+                            {!! $setting->about_us !!}
                         </p>
                     </div>
                 </div>
