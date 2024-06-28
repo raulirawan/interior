@@ -30,6 +30,7 @@ Route::get('/projects', [HomeController::class, 'projects'])->name('projects');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
 Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contact-us');
+Route::get('/testimoni/{code}', [HomeController::class, 'testimoni'])->name('testimoni');
 
 
 // service detail
@@ -42,6 +43,7 @@ Route::get('/projects/{project}/{slug?}', [HomeController::class, 'projectsDetai
 Route::get('/blogs/{blog}/{slug?}', [HomeController::class, 'blogsDetail'])->name('blogsDetail');
 
 Route::post('/store/messages', [MessageController::class, 'store'])->name('messages.store');
+Route::post('/update/testimoni/{code}', [HomeController::class, 'testimoniStore'])->name('testimoniStore.store');
 
 
 Auth::routes([

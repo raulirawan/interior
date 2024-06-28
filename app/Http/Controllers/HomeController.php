@@ -8,6 +8,8 @@ use App\Models\Service;
 use App\Models\Category;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
@@ -68,5 +70,41 @@ class HomeController extends Controller
     public function contactUs()
     {
         return view('contact-us');
+    }
+
+    public function testimoni($code)
+    {
+        $testimoni = Testimonial::where('code', $code)->whereNull('testimoni')->first();
+        if (!$testimoni) {
+            Alert::error('Error', 'Not Found');
+            return redirect()->route('home');
+        }
+        return view('testimoni', compact('testimoni'));
+    }
+
+    public function testimoniStore(Request $request, $code)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255',
+            'testimoni' => 'required|string',
+        ]);
+
+        $data = $validator->validated();
+
+        $testimoni = Testimonial::where('code', $code)->first();
+
+        if (!$testimoni) {
+            Alert::error('Error', 'Not Found');
+            return redirect()->route('home');
+        }
+
+        if ($testimoni->update($data)) {
+            Alert::success('Success', 'Thanks For Your Feedback :)');
+            return redirect()->route('home');
+        } else {
+            Alert::error('Error', 'Error, Try Again');
+            return redirect()->route('testimoni', $code);
+        }
     }
 }
