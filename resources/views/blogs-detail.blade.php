@@ -4,7 +4,7 @@
 @section('content')
     <div class="slider-area ">
         <div class="single-slider hero-overly slider-height2 d-flex align-items-center"
-            data-background="{{ asset('/frontend') }}/assets/img/hero/about.jpg">
+            data-background="{{ asset('/frontend') }}/assets/img/hero/img-menu.png">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">

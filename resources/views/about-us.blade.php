@@ -6,7 +6,7 @@
         <!-- slider Area Start-->
         <div class="slider-area ">
             <div class="single-slider hero-overly slider-height2 d-flex align-items-center"
-                data-background="{{ asset('/frontend') }}/assets/img/hero/about.jpg">
+                data-background="{{ asset('/frontend') }}/assets/img/hero/img-menu.png">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
@@ -48,7 +48,7 @@
                         <img src="{{ asset('/frontend') }}/assets/img/gallery/safe_in.png" alt="Image About">
                     </div>
                     <div class="support-img-cap text-center">
-                        <span>1994</span>
+                        <span>2000</span>
                         <p>Since</p>
                     </div>
                 </div>

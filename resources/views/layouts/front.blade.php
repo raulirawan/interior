@@ -24,10 +24,10 @@
     <style>
         .whatsapp-button {
             position: fixed;
-            left: 20px;
-            /* Adjust the distance from the left edge */
             bottom: 20px;
             /* Adjust the distance from the bottom edge */
+            right: 20px;
+            /* Adjust the distance from the right edge */
             z-index: 1000;
             /* Ensure it's above other content */
         }
@@ -39,6 +39,13 @@
             /* Makes the icon circular */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             /* Optional: Adds shadow */
+        }
+
+        #scrollUp {
+            right: 25px;
+            position: fixed;
+            z-index: 2147483647;
+            bottom: 90px;
         }
     </style>
 </head>
@@ -95,7 +102,8 @@
                                 <div class="logo">
                                     <!-- logo-1 -->
                                     <a href="{{ route('home') }}" class="big-logo"><img
-                                            src="{{ asset('frontend/assets/img/logo-wcsa.png') }}" style="width: 60px" alt="Logo"></a>
+                                            src="{{ asset('frontend/assets/img/logo-wcsa.png') }}" style="width: 60px"
+                                            alt="Logo"></a>
                                     <!-- logo-2 -->
                                     <a href="{{ route('home') }}" class="small-logo"><img
                                             src="{{ asset('frontend/assets/img/logo-wcsa.png') }}" style="width: 60px"
@@ -146,8 +154,8 @@
                                 <!-- logo -->
                                 <div class="footer-logo">
                                     <a href="{{ route('home') }}"><img
-                                            src="{{ asset('frontend/assets/img/logo-wcsa.png') }}" style="width: 60px; "
-                                            alt="Logo Footer"></a>
+                                            src="{{ asset('frontend/assets/img/logo-wcsa.png') }}"
+                                            style="width: 60px; " alt="Logo Footer"></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">

@@ -8,7 +8,7 @@
         <div class="slider-area ">
             <div class="slider-active">
                 <div class="single-slider  hero-overly slider-height d-flex align-items-center"
-                    data-background="{{ asset('/frontend') }}/assets/img/hero/h1_hero.jpg">
+                    data-background="{{ asset('/frontend') }}/assets/img/hero/img-hero.png">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-11">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="single-slider  hero-overly slider-height d-flex align-items-center"
-                    data-background="{{ asset('/frontend') }}/assets/img/hero/h1_hero.jpg">
+                    data-background="{{ asset('/frontend') }}/assets/img/hero/img-hero.png">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-11">
@@ -147,7 +147,7 @@
                         <img src="{{ asset('/frontend') }}/assets/img/gallery/safe_in.png" alt="Image About">
                     </div>
                     <div class="support-img-cap text-center">
-                        <span>1994</span>
+                        <span>2000</span>
                         <p>Since</p>
                     </div>
                 </div>
@@ -281,7 +281,7 @@
                                 <p>PT. Wahana Cipta Selaras Abyudaya is an Interior Contractor and Design company based in
                                     Jakarta, Indonesia. The company was established in 2000, and has been serving thousands
                                     of clients since its establishment.</p>
-                                <a href="{{ $setting->link_whatsapp }}" target="blank" class="white-btn">Contact Now</a>
+                                <a href="{{ asset('frontend/assets/file/WCSA COMPANY PROFILE 2022.pdf') }}" target="blank" class="white-btn">Download Our Project</a>
                             </div>
                         </div>
                     </div>
@@ -290,7 +290,7 @@
         </section>
         <!-- contact with us End-->
         <!-- CountDown Area Start -->
-        <div class="count-area">
+        {{-- <div class="count-area">
             <div class="container">
                 <div class="count-wrapper count-bg"
                     data-background="{{ asset('/frontend') }}/assets/img/gallery/section-bg3.jpg">
@@ -337,7 +337,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- CountDown Area End -->
         <!-- Team Start -->
         <div class="team-area section-padding30">
