@@ -1,5 +1,6 @@
 @extends('layouts.front')
 
+@section('title', 'Our Services - PT. Wahana Cipta Selaras Abudaya')
 
 @section('content')
     <main>
@@ -48,9 +49,11 @@
                                         <img src="{{ $service->image }}" alt="{{ $service->name }}">
                                     </div>
                                     <div class="service-cap">
-                                        <h4><a href="{{ route('servicesDetail', [$service->id, $service->slug]) }}">{{ $service->name }}</a></h4>
-                                        <a href="{{ route('servicesDetail', [$service->id, $service->slug]) }}" class="more-btn">Read More <i
-                                                class="ti-plus"></i></a>
+                                        <h4><a
+                                                href="{{ route('servicesDetail', [$service->id, $service->slug]) }}">{{ $service->name }}</a>
+                                        </h4>
+                                        <a href="{{ route('servicesDetail', [$service->id, $service->slug]) }}"
+                                            class="more-btn">Read More <i class="ti-plus"></i></a>
                                     </div>
                                     <div class="service-icon">
                                         <img src="{{ asset('/frontend') }}/assets/img/icon/services_icon1.png"

@@ -1,5 +1,6 @@
 @extends('layouts.front')
 
+@section('title' ,'Contact Us - PT. Wahana Cipta Selaras Abudaya')
 
 @section('content')
     <!-- slider Area Start-->

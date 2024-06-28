@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-
+@section('title' ,'PT. Wahana Cipta Selaras Abudaya')
 @section('content')
     <main>
 

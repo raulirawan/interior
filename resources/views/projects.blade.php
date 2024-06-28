@@ -1,5 +1,6 @@
 @extends('layouts.front')
 
+@section('title', 'Our Projects - PT. Wahana Cipta Selaras Abudaya')
 
 @section('content')
     <main>
@@ -87,9 +88,11 @@
                                                         <img src="{{ $project->image }}" alt="{{ $project->name }}">
                                                     </div>
                                                     <div class="project-cap">
-                                                        <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}" class="plus-btn"><i
-                                                                class="ti-plus"></i></a>
-                                                        <h4><a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}">{{ $project->name }}</a></h4>
+                                                        <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}"
+                                                            class="plus-btn"><i class="ti-plus"></i></a>
+                                                        <h4><a
+                                                                href="{{ route('projectsDetail', [$project->id, $project->slug]) }}">{{ $project->name }}</a>
+                                                        </h4>
                                                     </div>
                                                 </div>
                                             </div>

@@ -1,9 +1,11 @@
 @extends('layouts.front')
 
 
+@section('title', $project->name . ' - PT. Wahana Cipta Selaras Abudaya')
+
 @section('content')
     <style>
-      @media (max-width: 575px) {
+        @media (max-width: 575px) {
             .slider-area .hero-cap h2 {
                 font-size: 30px !important;
             }
