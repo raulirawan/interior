@@ -13,9 +13,9 @@
                             src="{{ asset('assets/images/logo-sibea-bea.png') }}" alt="Logo" srcset=""></a>
                 </div> --}}
                 <div class="theme-toggle d-flex gap-2  align-items-center mt-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        aria-hidden="true" role="img" class="iconify iconify--system-uicons" width="20"
-                        height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                        role="img" class="iconify iconify--system-uicons" width="20" height="20"
+                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 21 21">
                         <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round"
                             stroke-linejoin="round">
                             <path
@@ -114,6 +114,13 @@
                     <a href="{{ route('admin.messages.index') }}" class='sidebar-link'>
                         <i class="bi bi-chat-fill"></i>
                         <span>Messages</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item {{ request()->is('admin/clients*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.clients.index') }}" class='sidebar-link'>
+                        <i class="bi bi-people-fill"></i>
+                        <span>Clients</span>
                     </a>
                 </li>
 

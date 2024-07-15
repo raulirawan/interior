@@ -49,4 +49,18 @@ class TestimoniController extends Controller
             return redirect()->route('admin.testimonials.index');
         }
     }
+
+    public function show(Testimonial $testimonial)
+    {
+        $data = [
+            'is_show' => $testimonial->is_show == 1 ? 0 : 1
+        ];
+        if ($testimonial->update($data)) {
+            Alert::success('Success', 'Data Has Successfully Updated');
+            return redirect()->route('admin.testimonials.index');
+        } else {
+            Alert::error('Error', 'Data Has Failed Updated');
+            return redirect()->route('admin.testimonials.index');
+        }
+    }
 }

@@ -9,6 +9,7 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TestimoniController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -27,6 +28,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/projects', [HomeController::class, 'projects'])->name('projects');
+Route::get('/clients', [HomeController::class, 'clients'])->name('clients');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
 Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contact-us');
@@ -79,7 +81,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('projects/edit/{project}', [ProjectController::class, 'edit'])->name('admin.projects.edit');
     Route::post('projects/update/{project}', [ProjectController::class, 'update'])->name('admin.projects.update');
     Route::get('projects/delete/{project}', [ProjectController::class, 'delete'])->name('admin.projects.delete');
-
+    Route::get('projects/delete-image/{project}/{key}', [ProjectController::class, 'deleteImage'])->name('admin.projects.deleteImage');
     // services
     Route::get('services', [ServiceController::class, 'index'])->name('admin.services.index');
     Route::get('services/create', [ServiceController::class, 'create'])->name('admin.services.create');
@@ -101,6 +103,13 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('testimonials', [TestimoniController::class, 'index'])->name('admin.testimonials.index');
     Route::get('testimonials/generate', [TestimoniController::class, 'generate'])->name('admin.testimonials.generate');
     Route::get('testimonials/delete/{testimonial}', [TestimoniController::class, 'delete'])->name('admin.testimonials.delete');
+    Route::get('testimonials/show/{testimonial}', [TestimoniController::class, 'show'])->name('admin.testimonials.show');
+
+    // clinent
+    Route::get('clients', [ClientController::class, 'index'])->name('admin.clients.index');
+    Route::post('clients/create', [ClientController::class, 'store'])->name('admin.clients.store');
+    Route::post('clients/update/{client}', [ClientController::class, 'update'])->name('admin.clients.update');
+    Route::get('clients/delete/{client}', [ClientController::class, 'delete'])->name('admin.clients.delete');
 
 
     // settings

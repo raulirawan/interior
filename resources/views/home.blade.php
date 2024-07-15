@@ -210,10 +210,13 @@
                                 <div class="project-caption">
                                     <div class="row">
                                         @foreach ($projects as $project)
+                                        @php
+                                            $image = json_decode($project->image)
+                                        @endphp
                                             <div class="col-lg-4 col-md-6">
                                                 <div class="single-project mb-30">
                                                     <div class="project-img">
-                                                        <img src="{{ $project->image }}" alt="{{ $project->name }}">
+                                                        <img src="{{ asset('image/projects/'. $image[0]) }}" alt="{{ $project->name }}">
                                                     </div>
                                                     <div class="project-cap">
                                                         <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}"
@@ -235,10 +238,13 @@
                                     <div class="project-caption">
                                         <div class="row">
                                             @foreach ($category->projects as $project)
+                                            @php
+                                            $image = json_decode($project->image)
+                                        @endphp
                                                 <div class="col-lg-4 col-md-6">
                                                     <div class="single-project mb-30">
                                                         <div class="project-img">
-                                                            <img src="{{ $project->image }}" alt="{{ $project->name }}">
+                                                            <img src="{{ asset('image/projects/'. $image[0]) }}" alt="{{ $project->name }}">
                                                         </div>
                                                         <div class="project-cap">
                                                             <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}"

@@ -47,6 +47,52 @@
             z-index: 2147483647;
             bottom: 90px;
         }
+
+        .footer-area::after {
+            display: none;
+        }
+
+        .btn::before {
+            background: transparent;
+        }
+        .header-area {
+            /* background: #d3d3d366; */
+            background: #d3d3d3;
+        }
+
+        .main-header .main-menu ul li a {
+            color: #000;
+        }
+
+        .header-area .header-top .header-info-left ul li {
+            color: #000;
+
+        }
+
+        .header-sticky.sticky-bar.sticky {
+            background: #d3d3d3;
+        }
+        .footer-area {
+            background: #d3d3d3;
+        }
+
+        .footer-pera p{
+            color: #000 !important;
+        }
+        .footer-area .footer-tittle h4 {
+            color: #000;
+        }
+
+        .footer-area .footer-tittle ul li a {
+            color: #000;
+        }
+
+        .footer-area .footer-copy-right p {
+            color:  #000;
+        }
+        .slider-area .hero-cap .breadcrumb a {
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -118,6 +164,7 @@
                                             <li><a href="{{ route('home') }}">Home</a></li>
                                             <li><a href="{{ route('about-us') }}">About</a></li>
                                             <li><a href="{{ route('projects') }}">Projects</a></li>
+                                            <li><a href="{{ route('clients') }}">Clients</a></li>
                                             <li><a href="{{ route('services') }}">Services</a></li>
                                             <li><a href="{{ route('blogs') }}">Blog</a></li>
                                             <li><a href="{{ route('contact-us') }}">Contact</a></li>
@@ -175,6 +222,7 @@
                                         <li><a href="{{ route('about-us') }}">About</a></li>
                                         <li><a href="{{ route('services') }}">Services</a></li>
                                         <li><a href="{{ route('projects') }}">Projects</a></li>
+                                        <li><a href="{{ route('clients') }}">Client</a></li>
                                         <li><a href="{{ route('contact-us') }}">Contact Us</a></li>
                                     </ul>
                                 </div>
@@ -256,6 +304,8 @@
     <script src="{{ asset('/frontend') }}/assets/js/plugins.js"></script>
     <script src="{{ asset('/frontend') }}/assets/js/main.js"></script>
     @include('sweetalert::alert')
+    @stack('scripts')
+
 </body>
 
 </html>

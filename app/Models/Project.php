@@ -23,11 +23,11 @@ class Project extends Model
         return $this->hasOne(Category::class, 'id', 'category_id');
     }
 
-    public function getImageAttribute($value)
-    {
-        if ($value) {
-            return asset('image/projects/' . $value);
-        }
-        return asset('dummy/370x394.png');
-    }
+    // public function getImageAttribute($value)
+    // {
+    //     if ($value) {
+    //         return asset('image/projects/' . $value);
+    //     }
+    //     return asset('dummy/370x394.png');
+    // }
 }

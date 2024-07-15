@@ -59,7 +59,7 @@
                                                 data-id="{{ $item->id }}" data-name="{{ $item->name }}"
                                                 data-bs-toggle="modal" data-bs-target="#modal-edit">Edit</button>
                                             <a href="{{ route('admin.categories.delete', $item->id) }}"
-                                                onclick="return confirm('Yakin ?')" class="btn btn-danger btn-sm">Hapus</a>
+                                                onclick="return confirm('Are You Sure ?')" class="btn btn-danger btn-sm">Hapus</a>
                                         </td>
                                     </tr>
                                 @endforeach

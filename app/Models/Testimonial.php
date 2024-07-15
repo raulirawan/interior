@@ -14,5 +14,6 @@ class Testimonial extends Model
         'name',
         'email',
         'testimoni',
+        'is_show'
     ];
 }

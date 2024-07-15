@@ -46,7 +46,8 @@
                                     <th>Code</th>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th style="width: 20%">Action</th>
+                                    <th>Show</th>
+                                    <th style="width: 30%">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -57,13 +58,31 @@
                                         <td>{{ $item->name ?? '-' }}</td>
                                         <td>{{ $item->email ?? '-' }}</td>
                                         <td>
-                                            <a href="https://google.com" id="copy-url" class="btn btn-success btn-sm">Copy
+                                            @if ($item->is_show == 1)
+                                                <span class="badge bg-success"> Yes <span>
+                                                    @else
+                                                        <span class="badge bg-danger"> No <span>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if ($item->is_show == 1)
+                                                <a href="{{ route('admin.testimonials.show', $item->id) }}"
+                                                    class="btn btn-danger btn-sm"
+                                                    onclick="return confirm('Are You Sure ?')">Set Unshow</a>
+                                            @else
+                                                <a href="{{ route('admin.testimonials.show', $item->id) }}"
+                                                    class="btn btn-success btn-sm"
+                                                    onclick="return confirm('Are You Sure ?')">Set Show</a>
+                                            @endif
+                                            <a href="{{ route('testimoni', $item->code) }}" id="copy-url"
+                                                class="btn btn-primary btn-sm">Copy
                                                 Url</a>
                                             <button href="" class="btn btn-info btn-sm" id="detail"
                                                 data-testimoni="{{ $item->testimoni ?? '-' }}" data-bs-toggle="modal"
                                                 data-bs-target="#modal-detail">Detail</button>
                                             <a href="{{ route('admin.testimonials.delete', $item->id) }}"
-                                                onclick="return confirm('Yakin ?')" class="btn btn-danger btn-sm">Hapus</a>
+                                                onclick="return confirm('Are You Sure ?')"
+                                                class="btn btn-danger btn-sm">Hapus</a>
                                         </td>
                                     </tr>
                                 @endforeach

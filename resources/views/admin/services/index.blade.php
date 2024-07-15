@@ -60,7 +60,7 @@
                                             <a href="{{ route('admin.services.edit', $item->id) }}"
                                                 class="btn btn-info btn-sm" id="edit">Edit</a>
                                             <a href="{{ route('admin.services.delete', $item->id) }}"
-                                                onclick="return confirm('Yakin ?')" class="btn btn-danger btn-sm">Hapus</a>
+                                                onclick="return confirm('Are You Sure ?')" class="btn btn-danger btn-sm">Hapus</a>
                                         </td>
                                     </tr>
                                 @endforeach

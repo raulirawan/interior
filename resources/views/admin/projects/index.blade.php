@@ -51,18 +51,22 @@
                             </thead>
                             <tbody>
                                 @foreach ($projects as $item)
+                                    @php
+                                        $image = json_decode($item->image, true);
+                                    @endphp
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->category->name ?? '-' }}</td>
                                         <td>
-                                            <img src="{{ $item->image }}" style="width: 100px">
+                                            <img src="{{ asset('image/projects/'.$image[0])  }}" style="width: 100px">
                                         </td>
                                         <td>
                                             <a href="{{ route('admin.projects.edit', $item->id) }}"
                                                 class="btn btn-info btn-sm" id="edit">Edit</a>
                                             <a href="{{ route('admin.projects.delete', $item->id) }}"
-                                                onclick="return confirm('Yakin ?')" class="btn btn-danger btn-sm">Hapus</a>
+                                                onclick="return confirm('Are You Sure ?')"
+                                                class="btn btn-danger btn-sm">Hapus</a>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Client;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\Category;
@@ -17,7 +18,7 @@ class HomeController extends Controller
     public function index()
     {
         $blogs = Blog::limit(2)->get();
-        $testimonials = Testimonial::whereNotNull('testimoni')->get();
+        $testimonials = Testimonial::whereNotNull('testimoni')->where('is_show', 1)->get();
         $projects = Project::all();
         $services = Service::all();
         $categories = Category::with(['projects'])->get();
@@ -43,6 +44,11 @@ class HomeController extends Controller
         return view('projects-detail', compact('project'));
     }
 
+    public function clients()
+    {
+        $clients = Client::all();
+        return view('clients', compact('clients'));
+    }
 
     public function services()
     {

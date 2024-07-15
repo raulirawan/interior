@@ -52,7 +52,7 @@
                                         name="image" accept="image/*" onchange="previewImage(this)">
                                     {{-- <div id="image-error" class="invalid-feedback" style="display: block"></div> --}}
                                     <div class="form-text text-muted">
-                                        - Please upload an image with a minimum resolution of 370x394 pixels. <br>
+                                        - Please upload an image with a minimum resolution of 1170x544 pixels. <br>
                                         - Extension Image .jpg .png .jpeg<br>
                                         - max size 2MB
                                     </div>
@@ -158,7 +158,7 @@
                             required: true,
                             extension: "jpg|jpeg|png",
                             filesize: 2097152, // 2 MB in bytes
-                            fixDimension: [370, 268]
+                            fixDimension: [1170, 544]
                         }
                     },
                     messages: {

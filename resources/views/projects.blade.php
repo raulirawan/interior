@@ -54,18 +54,7 @@
                                                 aria-controls="{{ Str::slug($category->name) }}" aria-selected="false">
                                                 {{ $category->name }}</a>
                                         @endforeach
-                                        {{-- <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
-                                            href="#nav-profile" role="tab" aria-controls="nav-profile"
-                                            aria-selected="false"> Intorior</a>
-                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
-                                            href="#nav-contact" role="tab" aria-controls="nav-contact"
-                                            aria-selected="false">Recent</a>
-                                        <a class="nav-item nav-link" id="nav-last-tab" data-toggle="tab"
-                                            href="#nav-last" role="tab" aria-controls="nav-contact"
-                                            aria-selected="false">Big building</a>
-                                        <a class="nav-item nav-link" id="nav-technology" data-toggle="tab"
-                                            href="#nav-techno" role="tab" aria-controls="nav-contact"
-                                            aria-selected="false">Park</a> --}}
+
                                     </div>
                                 </nav>
                                 <!--End Nav Button  -->
@@ -82,10 +71,14 @@
                                 <div class="project-caption">
                                     <div class="row">
                                         @foreach ($projects as $project)
+                                            @php
+                                                $image = json_decode($project->image);
+                                            @endphp
                                             <div class="col-lg-4 col-md-6">
                                                 <div class="single-project mb-30">
                                                     <div class="project-img">
-                                                        <img src="{{ $project->image }}" alt="{{ $project->name }}">
+                                                        <img src="{{ asset('image/projects/' . $image[0]) }}"
+                                                            alt="{{ $project->name }}">
                                                     </div>
                                                     <div class="project-cap">
                                                         <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}"
@@ -107,15 +100,20 @@
                                     <div class="project-caption">
                                         <div class="row">
                                             @foreach ($category->projects as $project)
+                                                @php
+                                                    $image = json_decode($project->image);
+                                                @endphp
                                                 <div class="col-lg-4 col-md-6">
                                                     <div class="single-project mb-30">
                                                         <div class="project-img">
-                                                            <img src="{{ $project->image }}" alt="{{ $project->name }}">
+                                                            <img src="{{ asset('image/projects/' . $image[0]) }}"
+                                                                alt="{{ $project->name }}">
                                                         </div>
                                                         <div class="project-cap">
-                                                            <a href="project_details.html" class="plus-btn"><i
-                                                                    class="ti-plus"></i></a>
-                                                            <h4><a href="project_details.html">{{ $project->name }}</a>
+                                                            <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}"
+                                                                class="plus-btn"><i class="ti-plus"></i></a>
+                                                            <h4><a
+                                                                    href="{{ route('projectsDetail', [$project->id, $project->slug]) }}">{{ $project->name }}</a>
                                                             </h4>
                                                         </div>
                                                     </div>

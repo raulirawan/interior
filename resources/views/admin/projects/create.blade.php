@@ -31,7 +31,8 @@
 
                 <div class="card-header">Create Data Project</div>
                 <div class="card-body">
-                    <form action="{{ route('admin.projects.store') }}" id="form" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin.projects.store') }}" id="form" method="post"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-12">
@@ -63,17 +64,16 @@
                                 <div class="form-group">
                                     <label for="helpInputTop">Image</label>
                                     <input type="file" class="form-control-file form-control" id="image"
-                                        name="image" accept="image/*" onchange="previewImage(this)">
+                                        name="image[]" accept="image/*" onchange="previewImage(this)" multiple>
                                     {{-- <div id="image-error" class="invalid-feedback" style="display: block"></div> --}}
                                     <div class="form-text text-muted">
-                                        - Please upload an image with a minimum resolution of 370x394 pixels. <br>
+                                        - Please upload an image with a minimum resolution of 1171x540 pixels. <br>
                                         - Extension Image .jpg .png .jpeg<br>
                                         - max size 2MB
                                     </div>
-                                    <div class="mt-3" id="div-image-preview" style="display: none;">
-                                        <h5>Image Preview:</h5>
-                                        <img id="preview" src="" alt="Image Preview" class="img-fluid"
-                                            style="max-height: 300px;">
+                                    <h5 class="mt-4" id="header-image-preview" style="display: none">Image Preview:</h5>
+                                    <div class="mt-3" id="div-image-preview" style="display: none; display: inline-flex">
+
                                     </div>
 
                                     @error('image')
@@ -115,25 +115,36 @@
                 });
 
             function previewImage(event) {
+                const elem = $(event);
+                var files = event.files;
+                $("#div-image-preview").empty();
                 $("#div-image-preview").show();
-                var reader = new FileReader();
-                reader.onload = function() {
-                    var output = document.getElementById('preview');
-                    output.src = reader.result;
-                }
-                reader.readAsDataURL(event.files[0]);
+                $("#header-image-preview").show();
+                if (files.length > 0) {
+                    var index = 0;
+                    for (var i = 0; i < files.length; i++) {
 
-                const elem = $(event),
-                    file = event.files[0];
-                $(elem).removeData("imageWidth");
-                $(elem).removeData("imageHeight");
-                if (file) {
-                    const tmpImg = new Image();
-                    tmpImg.src = window.URL.createObjectURL(file);
-                    tmpImg.onload = function() {
-                        $(elem).data("imageWidth", tmpImg.naturalWidth);
-                        $(elem).data("imageHeight", tmpImg.naturalHeight);
-                    };
+                        var reader = new FileReader();
+
+                        var file = files[i];
+                        if (file) {
+                            const tmpImg = new Image();
+                            tmpImg.src = window.URL.createObjectURL(file);
+                            tmpImg.onload = function() {
+                                $(elem).data(`imageWidth${index}`, tmpImg.naturalWidth);
+                                $(elem).data(`imageHeight${index}`, tmpImg.naturalHeight);
+                            }
+                            reader.onload = function(e) {
+
+                                $("<div class='preview-image'>").html(
+                                    `<img src="${e.target.result}" alt="${file.name}" class="img-fluid preview" style="max-height: 300px;">`
+                                ).appendTo(
+                                    "#div-image-preview");
+
+                            }
+                            reader.readAsDataURL(file);
+                        }
+                    }
                 }
             }
             $(document).ready(function() {
@@ -147,20 +158,22 @@
                     "fixDimension",
                     function(value, element, param) {
                         if (element.files.length == 0) return true;
-
-                        var width = $(element).data("imageWidth");
-                        var height = $(element).data("imageHeight");
-                        if (typeof param[2] === "undefined" || param[2] === null) {
-                            if (width == param[0] && height == param[1]) {
-                                return true;
+                        for (var i = 0; i < element.files.length; i++) {
+                            var width = $(element).data(`imageWidth${i}`);
+                            var height = $(element).data(`imageHeight${i}`);
+                            if (typeof param[2] === "undefined" || param[2] === null) {
+                                if (width == param[0] && height == param[1]) {
+                                    return true;
+                                }
+                                return false;
+                            } else {
+                                if (width <= param[0] && height <= param[1]) {
+                                    return true;
+                                }
+                                return false;
                             }
-                            return false;
-                        } else {
-                            if (width <= param[0] && height <= param[1]) {
-                                return true;
-                            }
-                            return false;
                         }
+
                     },
                     "Please upload an image with dimensions {0}x{1} pixels."
                 );
@@ -168,11 +181,11 @@
 
                 $("#form").validate({
                     rules: {
-                        image: {
+                        "image[]": {
                             required: true,
                             extension: "jpg|jpeg|png",
                             filesize: 2097152, // 2 MB in bytes
-                            fixDimension: [370, 394]
+                            fixDimension: [1171, 540]
                         }
                     },
                     messages: {
