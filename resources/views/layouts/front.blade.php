@@ -93,6 +93,9 @@
         .slider-area .hero-cap .breadcrumb a {
             color: #fff;
         }
+        .hero-overly::before {
+            background-image: -webkit-linear-gradient(0deg, rgb(30 30 30 / 75%) 0%, rgba(2, 8, 52, 0.14902) 100%) !important;
+        }
     </style>
 </head>
 
