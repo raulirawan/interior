@@ -59,7 +59,7 @@
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->category->name ?? '-' }}</td>
                                         <td>
-                                            <img src="{{ asset('image/projects/'.$image[0])  }}" style="width: 100px">
+                                            <img src="{{ asset('image/projects/'.($image[0] ?? ''))  }}" style="width: 100px">
                                         </td>
                                         <td>
                                             <a href="{{ route('admin.projects.edit', $item->id) }}"

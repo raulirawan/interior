@@ -77,7 +77,7 @@
                                             <div class="col-lg-4 col-md-6">
                                                 <div class="single-project mb-30">
                                                     <div class="project-img">
-                                                        <img src="{{ asset('image/projects/' . $image[0]) }}"
+                                                        <img src="{{ asset('image/projects/' . ($image[0] ?? '')) }}"
                                                             alt="{{ $project->name }}">
                                                     </div>
                                                     <div class="project-cap">
@@ -106,7 +106,7 @@
                                                 <div class="col-lg-4 col-md-6">
                                                     <div class="single-project mb-30">
                                                         <div class="project-img">
-                                                            <img src="{{ asset('image/projects/' . $image[0]) }}"
+                                                            <img src="{{ asset('image/projects/' . ($image[0] ?? '')) }}"
                                                                 alt="{{ $project->name }}">
                                                         </div>
                                                         <div class="project-cap">
