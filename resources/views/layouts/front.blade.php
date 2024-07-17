@@ -56,17 +56,24 @@
             background: transparent;
         }
         .header-area {
-            /* background: #d3d3d366; */
-            background: #d3d3d3;
+            background: #d3d3d366;
+            /* background: #d3d3d3; */
         }
 
-        .main-header .main-menu ul li a {
+        /* .main-header .main-menu ul li a {
             color: #000;
         }
 
         .header-area .header-top .header-info-left ul li {
             color: #000;
 
+        } */
+        .header-sticky.sticky-bar.sticky .main-menu ul>li>a {
+            color: #000;
+        }
+
+        .header-sticky.sticky-bar.sticky {
+            background: #d3d3d3;
         }
 
         .header-sticky.sticky-bar.sticky {
@@ -95,6 +102,10 @@
         }
         .hero-overly::before {
             background-image: -webkit-linear-gradient(0deg, rgb(30 30 30 / 75%) 0%, rgba(2, 8, 52, 0.14902) 100%) !important;
+        }
+
+        .support-company-area .support-wrapper .right-content .support-img-cap {
+            background: #A78042;
         }
     </style>
 </head>
