@@ -1,11 +1,157 @@
 @extends('layouts.front')
 
-@section('title' ,'PT. Wahana Cipta Selaras Abudaya')
+@section('title', 'PT. Wahana Cipta Selaras Abudaya')
 @section('content')
+    @push('styles')
+        <style>
+            /* .slider-area2 {
+                                        background-image: url(../img/hero/hero2.jpg);
+                                        background-repeat: no-repeat;
+                                        background-size: cover;
+                                    } */
+
+            /* line 43, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+
+            .slider-area {
+                position: relative;
+                background-image: url({{ asset('frontend/assets/img/hero/h1_hero2.jpg') }});
+                background-repeat: no-repeat;
+                /* background-position: center center; */
+                background-size: cover;
+            }
+
+            /* line 50, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+
+            .slider-area .hero__caption {
+                overflow: hidden;
+            }
+
+            @media only screen and (min-width: 576px) and (max-width: 767px) {
+
+                /* line 50, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+                .slider-area .hero__caption {
+                    padding-top: 50px;
+                }
+            }
+
+            @media (max-width: 575px) {
+
+                /* line 50, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+                .slider-area .hero__caption {
+                    padding-top: 50px;
+                }
+            }
+
+            /* line 58, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+
+            .slider-area .hero__caption span {
+                color: #fff;
+                font-size: 25px;
+                line-height: 1.2;
+                font-weight: 300;
+                margin-bottom: 30px;
+                position: relative;
+                display: inline-block;
+                font-style: italic;
+                text-transform: uppercase;
+            }
+
+            /* line 68, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+
+            .slider-area .hero__caption span::before {
+                position: absolute;
+                content: "";
+                background-image: url({{ asset('frontend/assets/img/hero/hero_line.png') }});
+                background-repeat: no-repeat;
+                height: 35%;
+                bottom: -20px;
+                left: 0;
+                background-size: 75%;
+                right: 0;
+            }
+
+            /* line 81, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+
+            .slider-area .hero__caption h1 {
+                font-size: 80px;
+                font-weight: 600;
+                margin-bottom: 14px;
+                color: #fff;
+                line-height: 95px;
+                text-transform: capitalize;
+                /* margin-bottom: 40px; */
+            }
+
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+                /* line 81, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+                .slider-area .hero__caption h1 {
+                    font-size: 60px;
+                    line-height: 1.2;
+                }
+            }
+
+            @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+                /* line 81, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+                .slider-area .hero__caption h1 {
+                    font-size: 50px;
+                    line-height: 1.2;
+                }
+            }
+
+            @media only screen and (min-width: 576px) and (max-width: 767px) {
+
+                /* line 81, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+                .slider-area .hero__caption h1 {
+                    font-size: 35px;
+                    line-height: 1.2;
+                }
+            }
+
+            @media (max-width: 575px) {
+
+                /* line 81, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+                .slider-area .hero__caption h1 {
+                    font-size: 32px;
+                    line-height: 1.2;
+                }
+            }
+
+            /* line 105, ../../../sponDon TI/Running Project/263.InteriorDesign_HTML/HTML/assets/scss/_h1-hero.scss */
+
+            .slider-area .hero__caption h1 span {
+                color: #ff1313;
+            }
+
+            .slider-area .sub-text {
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.7);
+                letter-spacing: .2em;
+            }
+
+            .slider-area h1 {
+                font-weight: 900;
+                color: #fff;
+                font-size: 3rem;
+            }
+
+            .slider-area h1 strong {
+                font-weight: 900;
+            }
+
+            @media (min-width: 768px) {
+                .slider-area h1 {
+                    font-size: 5rem;
+                }
+            }
+        </style>
+    @endpush
     <main>
 
         <!-- slider Area Start-->
-        <div class="slider-area ">
+        {{-- <div class="slider-area ">
             <div class="slider-active">
                 <div class="single-slider  hero-overly slider-height d-flex align-items-center"
                     data-background="{{ asset('/frontend') }}/assets/img/hero/img-hero.png">
@@ -51,6 +197,40 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div> --}}
+        <div class="slider-area">
+            <div class="slider-active dot-style">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height hero-overly d-flex align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInLeft" data-delay=".4s">Welcome to our company</span>
+                                    <h1 data-animation="fadeInLeft" data-delay=".6s">
+                                        INTERIOR<br>
+                                        CONTRACTOR
+                                    </h1>
+                                    <p data-animation="fadeInLeft" data-delay=".7s" class="sub-text">PT. Wahana Cipta
+                                        Selaras Abyudaya</p>
+                                    <a href="{{ $setting->link_whatsapp }}" data-animation="fadeInLeft" data-delay=".8s"
+                                        target="_blank" class="btn">Get In Touch</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- <div class="container">
+                        <div class="row align-items-center text-center justify-content-center">
+                            <div class="col-md-12">
+                                <p data-animation="fadeInLeft" data-delay=".4s" class="sub-text" >PT. Wahana Cipta Selaras Abyudaya</p>
+                                <h1 data-animation="fadeInLeft" data-delay=".6s">Interior Contractor</h1>
+                                <a href="{{ $setting->link_whatsapp }}" data-animation="fadeInLeft" data-delay=".8s" target="_blank" class="btn">Get In Touch</a>
+                            </div>
+                        </div>
+                    </div> --}}
+                </div>
+
             </div>
         </div>
         <!-- slider Area End-->
@@ -210,13 +390,14 @@
                                 <div class="project-caption">
                                     <div class="row">
                                         @foreach ($projects as $project)
-                                        @php
-                                            $image = json_decode($project->image)
-                                        @endphp
+                                            @php
+                                                $image = json_decode($project->image);
+                                            @endphp
                                             <div class="col-lg-4 col-md-6">
                                                 <div class="single-project mb-30">
                                                     <div class="project-img">
-                                                        <img src="{{ asset('image/projects/'. ($image[0] ?? '')) }}" alt="{{ $project->name }}">
+                                                        <img src="{{ asset('image/projects/' . ($image[0] ?? '')) }}"
+                                                            alt="{{ $project->name }}">
                                                     </div>
                                                     <div class="project-cap">
                                                         <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}"
@@ -238,13 +419,14 @@
                                     <div class="project-caption">
                                         <div class="row">
                                             @foreach ($category->projects as $project)
-                                            @php
-                                            $image = json_decode($project->image)
-                                        @endphp
+                                                @php
+                                                    $image = json_decode($project->image);
+                                                @endphp
                                                 <div class="col-lg-4 col-md-6">
                                                     <div class="single-project mb-30">
                                                         <div class="project-img">
-                                                            <img src="{{ asset('image/projects/'. ($image[0] ?? '')) }}" alt="{{ $project->name }}">
+                                                            <img src="{{ asset('image/projects/' . ($image[0] ?? '')) }}"
+                                                                alt="{{ $project->name }}">
                                                         </div>
                                                         <div class="project-cap">
                                                             <a href="{{ route('projectsDetail', [$project->id, $project->slug]) }}"
@@ -287,7 +469,8 @@
                                 <p>PT. Wahana Cipta Selaras Abyudaya is an Interior Contractor and Design company based in
                                     Jakarta, Indonesia. The company was established in 2000, and has been serving thousands
                                     of clients since its establishment.</p>
-                                <a href="{{ asset('frontend/assets/file/WCSA COMPANY PROFILE 2022.pdf') }}" target="blank" class="white-btn">Download Our Project</a>
+                                <a href="{{ asset('frontend/assets/file/WCSA COMPANY PROFILE 2022.pdf') }}"
+                                    target="blank" class="white-btn">Download Our Project</a>
                             </div>
                         </div>
                     </div>

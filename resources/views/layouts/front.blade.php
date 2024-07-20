@@ -56,7 +56,7 @@
             background: transparent;
         }
         .header-area {
-            background: #d3d3d366;
+            background: #d3d3d324;
             /* background: #d3d3d3; */
         }
 
@@ -108,6 +108,7 @@
             background: #A78042;
         }
     </style>
+    @stack('styles')
 </head>
 
 <body>
