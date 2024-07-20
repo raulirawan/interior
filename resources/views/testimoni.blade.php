@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', 'Testimoni - PT. Wahana Cipta Selaras Abudaya')
+@section('title', 'Testimoni - PT. Wahana Cipta Selaras Abyudaya')
 
 @section('content')
     <!-- slider Area Start-->

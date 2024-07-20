@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', 'Our Clients - PT. Wahana Cipta Selaras Abudaya')
+@section('title', 'Our Clients - PT. Wahana Cipta Selaras Abyudaya')
 
 @section('content')
     <main>

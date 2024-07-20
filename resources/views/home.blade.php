@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', 'PT. Wahana Cipta Selaras Abudaya')
+@section('title', 'PT. Wahana Cipta Selaras Abyudaya')
 @section('content')
     @push('styles')
         <style>
@@ -164,8 +164,8 @@
                                     </div>
                                     <h1 data-animation="fadeInUp" data-delay=".5s">PT WAHANA</h1>
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
-                                        <h2>CIPTA SELARAS ABUDAYA</h2>
-                                        <h2>CIPTA SELARAS ABUDAYA</h2>
+                                        <h2>CIPTA SELARAS ABYUDAYA</h2>
+                                        <h2>CIPTA SELARAS ABYUDAYA</h2>
                                     </div>
                                     <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
                                         <span><a href="{{ route('services') }}">Our Services</a></span>
@@ -186,8 +186,8 @@
                                     </div>
                                     <h1 data-animation="fadeInUp" data-delay=".5s">advanced</h1>
                                     <div class="stock-text" data-animation="fadeInUp" data-delay=".8s">
-                                        <h2>CIPTA SELARAS ABUDAYA</h2>
-                                        <h2>CIPTA SELARAS ABUDAYA</h2>
+                                        <h2>CIPTA SELARAS ABYUDAYA</h2>
+                                        <h2>CIPTA SELARAS ABYUDAYA</h2>
                                     </div>
                                     <div class="hero-text2 mt-110" data-animation="fadeInUp" data-delay=".9s">
                                         <span><a href="{{ route('services') }}">Our Services</a></span>

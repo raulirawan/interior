@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 
-@section('title', $project->name . ' - PT. Wahana Cipta Selaras Abudaya')
+@section('title', $project->name . ' - PT. Wahana Cipta Selaras Abyudaya')
 
 @section('content')
     <style>

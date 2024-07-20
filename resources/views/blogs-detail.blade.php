@@ -1,6 +1,6 @@
 @extends('layouts.front')
 
-@section('title', $blog->name . ' - PT. Wahana Cipta Selaras Abudaya')
+@section('title', $blog->name . ' - PT. Wahana Cipta Selaras Abyudaya')
 
 @section('content')
     <div class="slider-area ">
