@@ -1,10 +1,10 @@
 (function ($)
   { "use strict"
-  
+
 /* 1. Proloder */
     $(window).on('load', function () {
-      $('#preloader-active').delay(450).fadeOut('slow');
-      $('body').delay(450).css({
+      $('#preloader-active').delay(100).fadeOut('slow');
+      $('body').delay(100).css({
         'overflow': 'visible'
       });
     });
@@ -39,7 +39,7 @@
         autoplaySpeed: 4000,
         dots: false,
         fade: true,
-        arrows: false, 
+        arrows: false,
         prevArrow: '<button type="button" class="slick-prev"><img src="img/hero_thumb/arrow-left.png" alt=""><img class="secondary-img" src="img/hero_thumb/left-white.png" alt=""></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="img/hero_thumb/arrow-right.png" alt=""><img class="secondary-img" src="img/hero_thumb/right-white.png" alt=""></button>',
         responsive: [{
@@ -219,8 +219,8 @@
   });
 
 
-    
-// 11. ---- Mailchimp js --------//  
+
+// 11. ---- Mailchimp js --------//
     function mailChimp() {
       $('#mc_embed_signup').find('form').ajaxChimp();
     }
