@@ -28,9 +28,9 @@
     <!-- ================ contact section start ================= -->
     <section class="contact-section">
         <div class="container">
-            <div class="row w-100">
+            <div class="row">
                 <div class="col-lg-12">
-                    <div class="d-none d-sm-block mb-5 pb-4">
+                    <div class="mb-5 pb-4">
                         <iframe style="width: 100%;"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.261523022555!2d106.74806107453314!3d-6.3601877622191285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ef376a0c2315%3A0x9597f1cd044ee96!2sWahana!5e0!3m2!1sen!2sid!4v1721887251280!5m2!1sen!2sid"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
