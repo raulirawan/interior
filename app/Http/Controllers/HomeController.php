@@ -27,7 +27,7 @@ class HomeController extends Controller
 
     public function aboutUs()
     {
-        $testimonials = Testimonial::whereNotNull('testimoni')->get();
+        $testimonials = Testimonial::whereNotNull('testimoni')->where('is_show', 1)->get();
 
         return view('about-us', compact('testimonials'));
     }
