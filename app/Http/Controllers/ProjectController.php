@@ -95,7 +95,6 @@ class ProjectController extends Controller
         //     }
         //     $data['image'] = $nama_file;
         // }
-
         if ($request->hasFile('image')) {
             $dataImage = [];
             foreach ($request->file('image') as $key => $val) {
@@ -114,11 +113,9 @@ class ProjectController extends Controller
                 $image = json_encode($dataImage);
             }
 
-            $dataUpdate = [
-                'image' => $image,
-            ];
+            $data['image'] = $image;
         }
-        if ($project->update($dataUpdate)) {
+        if ($project->update($data)) {
             Alert::success('Success', 'Data Has Successfully Updated');
             return redirect()->route('admin.projects.index');
         } else {
