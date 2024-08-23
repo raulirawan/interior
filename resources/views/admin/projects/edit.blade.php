@@ -69,6 +69,7 @@
                                     @enderror
                                 </div>
 
+
                                 <div class="form-group">
                                     <label for="helpInputTop">Image</label>
                                     <input type="file" class="form-control-file form-control" id="image"
@@ -120,6 +121,16 @@
                                     <textarea name="description" id="editor" class="form-control @error('description') is-invalid @enderror"
                                         id="description" cols="30" rows="40">{{ $project->description }}</textarea>
                                     @error('description')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="basicInput">Sequence</label>
+                                    <input type="text" class="form-control @error('sequence') is-invalid @enderror"
+                                        value="{{ $project->sequence ?? null }}" name="sequence" placeholder="Enter Sequence"
+                                        >
+                                    @error('sequence')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>

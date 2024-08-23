@@ -18,7 +18,7 @@ class ProjectController extends Controller
 
     public function index()
     {
-        $projects = Project::all();
+        $projects = Project::orderByRaw('sequence IS NULL, sequence asc')->get();
         return view('admin.projects.index', compact('projects'));
     }
 
@@ -36,6 +36,7 @@ class ProjectController extends Controller
             'category_id' => 'required|exists:categories,id',
             'image.*' => 'required|image|mimes:png,jpg,jpeg|max:2048',
             'description' => 'nullable',
+            'sequence' => 'nullable',
         ]);
 
 
@@ -79,6 +80,7 @@ class ProjectController extends Controller
             'category_id' => 'required|exists:categories,id',
             'image.*' => 'image|mimes:png,jpg,jpeg|max:2048',
             'description' => 'nullable',
+            'sequence' => 'nullable',
         ]);
 
         $data = $validator->validated();

@@ -89,6 +89,16 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="basicInput">Sequence</label>
+                                    <input type="text" class="form-control @error('sequence') is-invalid @enderror"
+                                        value="{{ old('sequence') }}" name="sequence" placeholder="Enter Sequence"
+                                        >
+                                    @error('sequence')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
                             </div>
                             <div class="col-sm-12 d-flex justify-content-start">
                                 <button type="submit" class="btn btn-primary me-1 mb-1">Save</button>

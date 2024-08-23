@@ -46,6 +46,7 @@
                                     <th>Name</th>
                                     <th>Category</th>
                                     <th>Image</th>
+                                    <th>Sequence</th>
                                     <th style="width: 15%">Action</th>
                                 </tr>
                             </thead>
@@ -58,8 +59,16 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->category->name ?? '-' }}</td>
+
                                         <td>
                                             <img src="{{ asset('image/projects/'.($image[0] ?? ''))  }}" style="width: 100px">
+                                        </td>
+                                          <td>
+                                            @if (!empty($item->sequence))
+                                            <span class="badge bg-success">{{ $item->sequence }}</span>
+                                            @else
+                                            <span class="badge bg-danger">-</span>
+                                            @endif
                                         </td>
                                         <td>
                                             <a href="{{ route('admin.projects.edit', $item->id) }}"

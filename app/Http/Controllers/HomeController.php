@@ -19,7 +19,7 @@ class HomeController extends Controller
     {
         $blogs = Blog::limit(2)->get();
         $testimonials = Testimonial::whereNotNull('testimoni')->where('is_show', 1)->get();
-        $projects = Project::all();
+        $projects = Project::orderByRaw('sequence IS NULL, sequence asc')->get();
         $services = Service::all();
         $categories = Category::with(['projects'])->get();
         return view('home', compact('services', 'projects', 'categories', 'testimonials', 'blogs'));
@@ -34,7 +34,7 @@ class HomeController extends Controller
 
     public function projects()
     {
-        $projects = Project::all();
+        $projects = Project::orderByRaw('sequence IS NULL, sequence asc')->get();
         $categories = Category::with(['projects'])->get();
         return view('projects', compact('projects', 'categories'));
     }
