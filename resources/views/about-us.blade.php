@@ -28,7 +28,7 @@
         <!-- slider Area End-->
         <!-- About Area Start -->
         <section class="support-company-area fix pt-10 section-padding30">
-            <div class="support-wrapper align-items-end">
+            <div class="support-wrapper align-items-center">
                 <div class="left-content">
                     <!-- section tittle -->
                     <div class="section-tittle section-tittle2 mb-55">
@@ -41,12 +41,13 @@
                         <p>
                             {!! $setting->about_us !!}
                         </p>
+                        <a href="{{ route('about-us') }}" class="btn red-btn2">read more</a>
                     </div>
                 </div>
                 <div class="right-content">
                     <!-- img -->
                     <div class="right-img">
-                        <img src="{{ asset('/frontend') }}/assets/img/gallery/safe_in.png" alt="Image About">
+                        <img src="{{ asset('assets/images/image-about.jpeg') }}" alt="Image About">
                     </div>
                     <div class="support-img-cap text-center">
                         <span>2000</span>
