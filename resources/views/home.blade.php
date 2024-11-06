@@ -469,7 +469,7 @@
                                 <p>PT. Wahana Cipta Selaras Abyudaya is an Interior Contractor and Design company based in
                                     Jakarta, Indonesia. The company was established in 2000, and has been serving thousands
                                     of clients since its establishment.</p>
-                                <a href="{{ asset('frontend/assets/file/WCSA COMPANY PROFILE 2022.pdf') }}"
+                                <a href="{{ asset('frontend/assets/file/Com Pro WCSA2024 edt2_241026_141555.pdf') }}"
                                     target="blank" class="white-btn">Download Our Project</a>
                             </div>
                         </div>
