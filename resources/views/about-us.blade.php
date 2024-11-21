@@ -108,7 +108,7 @@
         @endif
         <!-- Testimonial End -->
         <!-- Team Start -->
-        <div class="team-area section-padding30">
+        <div class="team-area section-padding30 d-none">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
