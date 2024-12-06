@@ -38,8 +38,8 @@
                                         <div class="blog_item_img">
                                             <img class="card-img rounded-0" src="{{ $blog->image }}" alt="{{ $blog->name }}">
                                             <a href="#" class="blog_item_date">
-                                                <h3>{{ Carbon\Carbon::parse($blog->created_at)->format('d') }}</h3>
-                                                <p>{{ Carbon\Carbon::parse($blog->created_at)->format('F') }}</p>
+                                                <h3>{{ Carbon\Carbon::parse($blog->date)->format('d') }}</h3>
+                                                <p>{{ Carbon\Carbon::parse($blog->date)->format('F') }}</p>
                                             </a>
                                         </div>
 
@@ -52,7 +52,7 @@
                                                 <li><a href="#"><i class="fa fa-user"></i>
                                                         {{ ucfirst($blog->user->name) }}</a></li>
                                                 <li><a href="#"><i class="fa fa-clock"></i>
-                                                        {{ Carbon\Carbon::parse($blog->created_at)->format('d F Y H:i') }}</a>
+                                                        {{ Carbon\Carbon::parse($blog->date)->format('d F Y H:i') }}</a>
                                                 </li>
                                             </ul>
                                         </div>

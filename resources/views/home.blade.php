@@ -654,13 +654,13 @@
                                     <div class="news-img">
                                         <img src="{{ $blog->image }}" alt="{{ $blog->name }}">
                                         <div class="news-date text-center">
-                                            <span>{{ Carbon\Carbon::parse($blog->created_at)->format('d') }}</span>
-                                            <p>{{ Carbon\Carbon::parse($blog->created_at)->format('F') }}</p>
+                                            <span>{{ Carbon\Carbon::parse($blog->date)->format('d') }}</span>
+                                            <p>{{ Carbon\Carbon::parse($blog->date)->format('F') }}</p>
                                         </div>
                                     </div>
                                     <div class="news-caption">
                                         <ul class="david-info">
-                                            <li>{{ Carbon\Carbon::parse($blog->created_at)->format('d F Y H:i') }}</li>
+                                            <li>{{ Carbon\Carbon::parse($blog->date)->format('d F Y H:i') }}</li>
                                         </ul>
                                         <h2><a
                                                 href="{{ route('blogsDetail', [$blog->id, $blog->slug]) }}">{{ $blog->name }}</a>

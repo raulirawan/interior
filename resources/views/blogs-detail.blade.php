@@ -37,7 +37,7 @@
                             <ul class="blog-info-link mt-3 mb-4">
                                 <li><a href="#"><i class="fa fa-user"></i> {{ $blog->user->name }}</a></li>
                                 <li><a href="#"><i class="fa fa-comments"></i>
-                                        {{ Carbon\Carbon::parse($blog->created_at)->format('d F Y H:i') }}</a></li>
+                                        {{ Carbon\Carbon::parse($blog->date)->format('d F Y H:i') }}</a></li>
                             </ul>
                             {!! $blog->description !!}
                         </div>
